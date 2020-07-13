@@ -14,7 +14,8 @@ import javax.swing.JPanel;
 
 public class MyFirstSwingGUI {
 	public void run() {
-
+		JFrame frame=new JFrame();
+		frame.isVisible();
 		// 1. Declare and initialize an object of the JFrame class
 
 		// 2. Set your JFrame object to be visible

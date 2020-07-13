@@ -11,51 +11,67 @@ public class Houses {
 	static int movement = 0;
 	static String size;
 	static String roof;
- static Random ran= new Random();
+	static Random ran = new Random();
+	static int real;
+
 	public static void main(String[] args) {
 		rob.setSpeed(70);
 		rob.setX(0);
 		rob.setY(600);
 		rob.miniaturize();
 		rob.penDown();
-		//first house
-//		rob.turn(90);
-//		rob.move(30);
-//		rob.turn(-90);
-//		rob.move(100);
-//		drawPointyRoof();
-//		rob.move(100);
-//		rob.setAngle(0);
-//		//
-		
-		
-		
-	for (int i = 0; i < 22; i++) {
+		// first house
+		rob.setRandomPenColor();
+		rob.turn(90);
+		rob.move(30);
+		rob.turn(-90);
+		rob.move(100);
+		drawPointyRoof();
+		rob.move(100);
+		rob.setAngle(0);
+		//
+for (int i = 0; i < 22; i++) {
+	
 
-//
-//			if (ran.equals(0)) {
-//				movement = 60;
-//			} else if (ran.equals(1)) {
-//				movement = 120;
-//			} else if (ran.equals(2)) {
-//				movement = 250;
-//			}
-//			run();
-//
-		}
+		real = ran.nextInt(3);
 
+rob.setRandomPenColor();
+			if (real == 0) {
+				movement = 60;
+			} else if (real == 1) {
+				movement = 120;
+			} else if (real == 2) {
+				movement = 250;
+			}
+			run();
+}
+	}
+
+	private static long nextInt(int i) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	static public void run() {
+		
 		rob.turn(90);
 		rob.move(30);
 		rob.turn(-90);
 		rob.move(movement);
- if (roof.equals("pointy")) {
+		if (real == 2) {
+			
 			drawPointyRoof();
 		}
-//		if () {
-//			drawFlatRoof();}
+		if (real == 1 ) {
+			
+			drawFlatRoof();
+			
+		}
+		if (real == 0 ) {
+		
+			drawFlatRoof();
+		}
+		
 		rob.move(movement);
 		rob.setAngle(0);
 

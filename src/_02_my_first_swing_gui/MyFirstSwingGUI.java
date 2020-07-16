@@ -18,7 +18,11 @@ public class MyFirstSwingGUI {
 		frame.setVisible(true);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
-		
+		JPanel panel=new JPanel();
+		JLabel label=new JLabel();
+		label.setText("hello");
+		frame.add(panel);
+		frame.add(label);
 		// 1. Declare and initialize an object of the JFrame class
 
 		// 2. Set your JFrame object to be visible

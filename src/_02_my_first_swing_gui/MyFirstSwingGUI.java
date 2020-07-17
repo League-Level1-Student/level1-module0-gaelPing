@@ -23,6 +23,7 @@ public class MyFirstSwingGUI {
 		label.setText("hello");
 		frame.add(panel);
 		frame.add(label);
+		label.setIcon(loadImage());
 		// 1. Declare and initialize an object of the JFrame class
 
 		// 2. Set your JFrame object to be visible

@@ -22,10 +22,11 @@ public class PhotoQuiz {
 		quizWindow.setVisible(true);
 		// This will make sure the program exits when you close the window
 		quizWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		String image = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.reddit.com%2Fr%2Ffivenightsatfreddys%2Fcomments%2F8xg4ow%2Fc4d_excuse_me%2F&psig=AOvVaw3fL5l78Ntw4e4TgoAcgbmM&ust=1595110483772000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCIDu8-On1eoCFQAAAAAdAAAAABAD";
-		
-		
-		
+
+		String image = "https://i.redd.it/f4hxtei3qyv11.jpg";
+
+		Component cursed;
+		cursed = createImage(image);
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
 		// “Copy Image Address”)
@@ -35,9 +36,9 @@ public class PhotoQuiz {
 		// 3. use the "createImage()" method below to initialize your Component
 
 		// 4. add the image to the quiz window
-
+		quizWindow.add(cursed);
 		// 5. call the pack() method on the quiz window
-
+		quizWindow.pack();
 		// 6. ask a question that relates to the image
 
 		// 7. print "CORRECT" if the user gave the right answer

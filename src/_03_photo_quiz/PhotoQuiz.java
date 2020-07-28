@@ -3,7 +3,7 @@ package _03_photo_quiz;
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
  */
-
+// Are you still there?
 import java.awt.Component;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -40,9 +40,16 @@ public class PhotoQuiz {
 		// 5. call the pack() method on the quiz window
 		quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+		
+String respons=JOptionPane.showInputDialog("is this image good");
 		// 7. print "CORRECT" if the user gave the right answer
-
+if (respons.equals("yes")) {
+	System.out.println("CORRECT");
+}
+else {
+	System.out.println("INCORRECT");
+	
+}
 		// 8. print "INCORRECT" if the answer is wrong
 
 		// 9. remove the component from the quiz window (you may not see the

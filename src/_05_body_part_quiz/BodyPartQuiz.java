@@ -16,6 +16,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class BodyPartQuiz {
+
 	
 
 	// You can use the celebrity photos we have placed in the default java
@@ -48,7 +49,7 @@ public class BodyPartQuiz {
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
 		window.setSize(500, 500);
-
+         
 		showNextImage();
 
 	}

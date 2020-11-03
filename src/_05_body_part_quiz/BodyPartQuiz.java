@@ -17,7 +17,6 @@ import javax.swing.JPanel;
 
 public class BodyPartQuiz {
 
-	
 
 	// You can use the celebrity photos we have placed in the default java
 	// package,or if you prefer, get celebrity photos from the Internet,
@@ -33,22 +32,25 @@ public class BodyPartQuiz {
 	
 
 	public void run() {
+		
 		initializeGui();
 		startQuiz();
+		
 	}
 
 	private void initializeGui() {
 		initializeImageList();
 		window.setSize(300, 300);
-		window.add(panel);
-		panel.add(getNextImage());
+		window.setVisible(true);
 		imageIterator = imageList.iterator();
-		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		panel.add(getNextImage());
 		window.add(panel);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setSize(500, 500)
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		;
          
 		showNextImage();
 
@@ -57,7 +59,7 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-int score=0;
+int points = 0;
 		// 2. Set the size of the window in the initializeGui() method 
 
 		// 4. Ask the user who this person is and store their answer
@@ -67,18 +69,19 @@ int score=0;
 		// -- Tell them they are right and increase the score by 1
 if (guess.contains("arnold")) {
 	System.out.println("correct");
-	score++;
+	points++;
 	
 }
 else {
 	System.out.println("incorect that is arnold");
+	showNextImage();
 }
 
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
 
 		// 7. Use the showNextImage() method below to get the next image
-		showNextImage();
+		
 
 		// 8. .... repeat 4-7 for all your images.....
 

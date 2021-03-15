@@ -7,9 +7,9 @@ import javax.sound.sampled.Clip;
 
 public class SoundEffectsMachine {
 	
-	playSound("sawing-wood-daniel_simon.wav");
+	
 
-private void playSound(String soundFile) {
+private void playSound(String sawing-wood-daniel_simon.) {
 	String path = "src/_09_sound_effects_machine/";
 		File sound = new File(path+soundFile);
 		if (sound.exists()) {
@@ -28,4 +28,4 @@ private void playSound(String soundFile) {
 			System.out.println("File does not exist");
 		}
 	
-}}
+}} 

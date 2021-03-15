@@ -1,13 +1,33 @@
 package _10_cuteness_tv;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.URI;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-public class CutnessTv {
+public class CutenessTv implements ActionListener {
 	JFrame frame = new JFrame();
-	JButton button =new JButton();
+	JPanel panel = new JPanel();
+	JButton button1 = new JButton();
+	JButton button2 = new JButton();
+	JButton button3 = new JButton();
+
+	public void showButton() {
+
+		panel.add(button1);
+		panel.add(button2);
+		panel.add(button3);
+		frame.setVisible(true);
+		button1.addActionListener(this);
+		button2.addActionListener(this);
+		button3.addActionListener(this);
+		frame.add(panel);
+		frame.pack();
+
+	}
 
 	void showDucks() {
 		playVideo("https://www.youtube.com/watch?v=MtN1YnoL46Q");
@@ -36,6 +56,23 @@ public class CutnessTv {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		JButton buttonPressed = (JButton) arg0.getSource();
+		if (buttonPressed.equals(button1)) {
+			showDucks();
+			System.out.println("1");
+		}
+		if (buttonPressed.equals(button2)) {
+			showFrog();
+			System.out.println("2");
+		}
+		if (buttonPressed.equals(button3)) {
+			showFluffyUnicorns();
+			System.out.println("3");
 		}
 	}
 

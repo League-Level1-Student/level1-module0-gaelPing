@@ -25,7 +25,7 @@ ellipse(randomNumber, y, 30, 50);
    fill(0, 0, 0);
     textSize(16);
     text("Score: " + score, 20, 20);
-  
+  if(mouseX==y){y=0;};
 }
 
  void checkCatch(int x){
